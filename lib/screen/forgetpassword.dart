@@ -16,7 +16,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       Center(
 
         child: Text(
-            'here you can reset your password this is the screen where ui will be implemented  for the changges in the password or  ressenting it'),
+            'here you can reset your password this is the screen where ui will be implemented  for the changes in the password or  ressenting it'),
       ),
     );
   }

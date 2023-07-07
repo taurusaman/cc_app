@@ -9,53 +9,14 @@ class homescreen extends StatefulWidget {
   const homescreen({super.key});
 
   @override
-  State<homescreen> createState() => _homescreenState();
+  State<homescreen> createState() => _homescreenstate();
 }
 
-class _homescreenState extends State<homescreen> {
+class _homescreenstate extends State<homescreen> {
   int currentIndex = 0;
 
   List pages = [homescreen(), explore(), search(), profilescreen()];
 
-  List subjects = [];
-  void addSubject(String subjectname) {
-    setState(() {
-      subjects.add(subjectname);
-    });
-  }
-
-  void showAddSubjectDialog() {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        TextEditingController _textEditingController = TextEditingController();
-        return AlertDialog(
-          backgroundColor: Color.fromARGB(255, 199, 91, 52),
-          title: Text('Add Suggestion'),
-          content: TextField(
-            controller: _textEditingController,
-            decoration: InputDecoration(labelText: 'Add Suggestion'),
-          ),
-          actions: [
-            TextButton(
-              child: Text('Cancel'),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-            TextButton(
-              child: Text('Add'),
-              onPressed: () {
-                String subjectName = _textEditingController.text;
-                addSubject(subjectName);
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,19 +30,11 @@ class _homescreenState extends State<homescreen> {
       Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(
-            'Add Subjects for Attendance:',
+            'Welcome to coding club community',
             style: TextStyle(fontSize: 24.0),
           ),
           SizedBox(height: 10.0),
-          ListView.builder(
-            shrinkWrap: true,
-            itemCount: subjects.length,
-            itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(subjects[index]),
-              );
-            },
-          ),
+
           Container(
             width: double.infinity,
             height: 180,
@@ -91,7 +44,7 @@ class _homescreenState extends State<homescreen> {
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Welcome Coding Club here is our App and we are going rock through this website',
+                  'Welcome Coding Club here is our App and we are going rock through this app',
                   style: TextStyle(fontSize: 30),
                 ),
               ),
@@ -101,12 +54,11 @@ class _homescreenState extends State<homescreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showAddSubjectDialog();
+
         },
         child: Icon(Icons.add),
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
       ),
-
 
 
       bottomNavigationBar: BottomNavigationBar(
@@ -144,10 +96,10 @@ class _homescreenState extends State<homescreen> {
           children: [
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 199, 91, 52),
+                color: Colors.black87,
               ),
               child: Text(
-                'Attendance',
+                'Coding Club',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
@@ -164,7 +116,7 @@ class _homescreenState extends State<homescreen> {
             ),
             ListTile(
               leading: Icon(Icons.settings),
-              title: Text('Settings man'),
+              title: Text('Settings'),
               onTap: () {
                 Navigator.push(
                     context,

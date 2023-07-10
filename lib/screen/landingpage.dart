@@ -10,6 +10,23 @@ class landingpage extends StatefulWidget {
 class _landingpageState extends State<landingpage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        backgroundColor: Colors.black87,
+        
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FilledButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: Text('Login')),
+            FilledButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/register');
+                },
+                child: Text('Register'))
+          ],
+        ));
   }
 }

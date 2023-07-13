@@ -1,4 +1,3 @@
-
 import 'package:cc_app/screen/explore.dart';
 import 'package:cc_app/screen/profile.dart';
 import 'package:cc_app/screen/search.dart';
@@ -17,7 +16,13 @@ class _homescreenstate extends State<homescreen> {
 
   List pages = [homescreen(), explore(), search(), profilescreen()];
 
+  List imagePaths = [
+    'assets/images/image1.jpg',
+    'assets/images/image2.jpg',
+    'assets/images/image3.jpg',
+  ];
 
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,15 +31,13 @@ class _homescreenstate extends State<homescreen> {
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
         title: Text('Coding Club'),
       ),
-      body:
-      Center(
+      body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(
             'Welcome to coding club community',
             style: TextStyle(fontSize: 24.0),
           ),
           SizedBox(height: 10.0),
-
           Container(
             width: double.infinity,
             height: 180,
@@ -53,14 +56,10 @@ class _homescreenstate extends State<homescreen> {
         ]),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-
-        },
-        child: Icon(Icons.add),
+        onPressed: () {},
+        child: Icon(Icons.message),
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
       ),
-
-
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
         currentIndex: currentIndex,

@@ -1,31 +1,32 @@
-
+import 'dart:async';
+import 'package:cc_app/screen/landingpage.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
   @override
-  State<SplashScreen> createState() => _SplashScreenState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  Widget build(BuildContext context) {
-    Future.delayed(Duration(seconds: 4), () {
-      Navigator.pushReplacementNamed(context, '/landing');
-    });
-
-    return Scaffold(
-      backgroundColor: Colors.black87,
-      body: Center(
-        child: Image.asset(
-          'assets/cclog.png',
-          height: 150,
-          width: 150,
-        ),
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 8),
+      () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => landingpage()),
       ),
-
-
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+        child: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('assets/images/Splash3.png'),
+                    fit: BoxFit.cover))));
   }
 }

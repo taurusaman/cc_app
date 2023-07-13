@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 8),
+      Duration(seconds: 3),
       () => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => landingpage()),
@@ -22,11 +22,10 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-        child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/images/Splash3.png'),
+    return Scaffold(
+        body: Container(
+            child: Center(
+                child: Image.asset('assets/images/cclog.png',
                     fit: BoxFit.cover))));
   }
 }

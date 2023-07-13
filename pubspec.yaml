@@ -57,12 +57,12 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  # uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-assets:
- - assets/images/Splash3.png
- - assets/images/cclog.png
+  assets:
+   - assets/images/Splash3.png
+   - assets/images/cclog.png
  
 
   #   - images/a_dot_ham.jpeg

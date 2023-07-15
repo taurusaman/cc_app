@@ -42,7 +42,7 @@ class _homescreenstate extends State<homescreen> {
               options: CarouselOptions(
                 autoPlay: true,
                 enlargeCenterPage: true,
-                aspectRatio: 16 / 9,
+                aspectRatio: 16 / 7,
                 initialPage: 0,
                 autoPlayCurve: Curves.fastOutSlowIn,
               ),

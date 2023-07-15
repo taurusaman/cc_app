@@ -31,8 +31,9 @@ class _homescreenstate extends State<homescreen> {
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
         title: Text('Coding Club'),
       ),
-      body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start, 
+        children: [
           Text(
             'Welcome to coding club community',
             style: TextStyle(fontSize: 24.0),
@@ -54,7 +55,7 @@ class _homescreenstate extends State<homescreen> {
             ),
           ),
         ]),
-      ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.message),

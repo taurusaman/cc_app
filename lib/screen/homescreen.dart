@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cc_app/screen/explore.dart';
 import 'package:cc_app/screen/profile.dart';
 import 'package:cc_app/screen/search.dart';
@@ -16,13 +17,6 @@ class _homescreenstate extends State<homescreen> {
 
   List pages = [homescreen(), explore(), search(), profilescreen()];
 
-  List imagePaths = [
-    'assets/images/image1.jpg',
-    'assets/images/image2.jpg',
-    'assets/images/image3.jpg',
-  ];
-
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,31 +25,51 @@ class _homescreenstate extends State<homescreen> {
         backgroundColor: Color.fromARGB(255, 199, 91, 52),
         title: Text('Coding Club'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start, 
-        children: [
-          Text(
-            'Welcome to coding club community',
-            style: TextStyle(fontSize: 24.0),
-          ),
-          SizedBox(height: 10.0),
-          Container(
-            width: double.infinity,
-            height: 180,
-            child: Card(
-              color: Color.fromARGB(255, 199, 91, 52),
-              elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  'Welcome Coding Club here is our App and we are going rock through this app',
-                  style: TextStyle(fontSize: 30),
+      body: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            CarouselSlider(
+              items: [
+                Image.asset('assets/images/image1.JPG'),
+                Image.asset('assets/images/image2.JPG'),
+                Image.asset('assets/images/image3.jpg'),
+                Image.asset('assets/images/image4.jpg'),
+                Image.asset('assets/images/image5.jpg'),
+                Image.asset('assets/images/image6.jpg'),
+                Image.asset('assets/images/image7.jpg'),
+                Image.asset('assets/images/image8.jpg'),
+              ],
+              options: CarouselOptions(
+                autoPlay: true,
+                enlargeCenterPage: true,
+                aspectRatio: 16 / 9,
+                initialPage: 0,
+                autoPlayCurve: Curves.fastOutSlowIn,
+              ),
+            ),
+            SizedBox(height: 10), // Adjust the size of the indicator space
+
+            Text(
+              'Welcome to coding club community',
+              style: TextStyle(fontSize: 24.0),
+            ),
+            SizedBox(height: 10.0),
+            Container(
+              width: double.infinity,
+              height: 180,
+              child: Card(
+                color: Color.fromARGB(255, 199, 91, 52),
+                elevation: 10,
+                child: Padding(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    'Welcome Coding Club here is our App and we are going rock through this app',
+                    style: TextStyle(fontSize: 30),
+                  ),
                 ),
               ),
             ),
-          ),
-        ]),
-      
+          ])),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Icon(Icons.message),

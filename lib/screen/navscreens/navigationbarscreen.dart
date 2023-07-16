@@ -1,7 +1,7 @@
 import 'package:cc_app/screen/navscreens/explore.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
-import 'package:cc_app/screen/otherscreens/search.dart';
+import 'package:cc_app/screen/navscreens/search.dart';
 import 'package:cc_app/screen/otherscreens/setting.dart';
 import 'package:flutter/material.dart';
 

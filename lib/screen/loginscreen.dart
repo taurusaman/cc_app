@@ -1,6 +1,6 @@
 import 'package:cc_app/screen/forgetpassword.dart';
-import 'package:cc_app/screen/homescreen.dart';
-import 'package:cc_app/screen/navigationbarscreen.dart';
+import 'package:cc_app/screen/navscreens/homescreen.dart';
+import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/regissterscreen.dart';
 import 'package:flutter/material.dart';
 

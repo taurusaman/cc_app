@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cc_app/screen/explore.dart';
-import 'package:cc_app/screen/homescreen.dart';
-import 'package:cc_app/screen/profile.dart';
+import 'package:cc_app/screen/navscreens/explore.dart';
+import 'package:cc_app/screen/navscreens/homescreen.dart';
+import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/search.dart';
 import 'package:cc_app/screen/setting.dart';
 import 'package:flutter/material.dart';

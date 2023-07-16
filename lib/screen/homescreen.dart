@@ -4,6 +4,7 @@ import 'package:cc_app/screen/profile.dart';
 import 'package:cc_app/screen/search.dart';
 import 'package:cc_app/screen/setting.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class homescreen extends StatefulWidget {
   const homescreen({super.key});

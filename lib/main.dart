@@ -1,10 +1,10 @@
 
-import 'package:cc_app/screen/forgetpassword.dart';
+import 'package:cc_app/screen/otherscreens/forgetpassword.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
-import 'package:cc_app/screen/landingpage.dart';
-import 'package:cc_app/screen/loginscreen.dart';
-import 'package:cc_app/screen/regissterscreen.dart';
-import 'package:cc_app/screen/splashscreen.dart';
+import 'package:cc_app/screen/otherscreens/landingpage.dart';
+import 'package:cc_app/screen/otherscreens/loginscreen.dart';
+import 'package:cc_app/screen/otherscreens/regissterscreen.dart';
+import 'package:cc_app/screen/otherscreens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

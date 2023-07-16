@@ -1,5 +1,5 @@
 
-import 'package:cc_app/screen/loginscreen.dart';
+import 'package:cc_app/screen/otherscreens/loginscreen.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,11 +1,9 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cc_app/screen/navscreens/explore.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/search.dart';
 import 'package:cc_app/screen/setting.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
 
 class navscreen extends StatefulWidget {
   const navscreen({super.key});
@@ -32,7 +30,6 @@ class _navscreebstate extends State<navscreen> {
         title: Text('Coding Club'),
       ),
       body: screens[currentIndex],
-      
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         backgroundColor: Color.fromARGB(255, 199, 91, 52),

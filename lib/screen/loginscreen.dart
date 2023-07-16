@@ -1,7 +1,6 @@
-
-
 import 'package:cc_app/screen/forgetpassword.dart';
 import 'package:cc_app/screen/homescreen.dart';
+import 'package:cc_app/screen/navigationbarscreen.dart';
 import 'package:cc_app/screen/regissterscreen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +20,6 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
             backgroundColor: Colors.black87,
             body: Stack(children: [
               Container(
-
                 padding: EdgeInsets.only(top: 130, left: 80),
                 child: Text(
                   'Welcome\nBack',
@@ -66,12 +64,16 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                         height: 30,
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 199, 91, 52),),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color.fromARGB(255, 199, 91, 52),
+                        ),
                         onPressed: () async {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => homescreen()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => navscreen()));
                         },
                         child: Text('Log in'),
-
                       ),
                       SizedBox(
                         height: 60,
@@ -90,7 +92,7 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                                   style: TextStyle(
                                     decoration: TextDecoration.underline,
                                     fontSize: 15,
-                                    color:Color.fromARGB(255, 199, 91, 52),
+                                    color: Color.fromARGB(255, 199, 91, 52),
                                   )),
                             ),
                             TextButton(

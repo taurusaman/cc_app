@@ -21,13 +21,14 @@ class _homescreenstate extends State<homescreen> {
   ];
   @override
   Widget build(BuildContext context) {
+    var time = DateTime.now();
+
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: 
-          [Colors.orange, Colors.black])
-        ),
-       child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+        body: Container(
+      decoration: BoxDecoration(
+          gradient:
+              LinearGradient(colors: [Colors.orangeAccent, Colors.black])),
+      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         CarouselSlider(
           options: CarouselOptions(
             autoPlay: true,
@@ -58,15 +59,15 @@ class _homescreenstate extends State<homescreen> {
         SizedBox(height: 10), // Adjust the size of the indicator space
         Container(
             width: double.infinity,
-            height: 80,
+            height: 100,
             child: Card(
               color: Color.fromARGB(255, 199, 91, 52),
               elevation: 10,
               child: Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  'Welcome to Coding Club',
-                  style: TextStyle(fontSize: 30),
+                  'Welcome to Coding Club Currently Date and Time is: $time',
+                  style: TextStyle(fontSize: 20),
                 ),
               ),
             )),

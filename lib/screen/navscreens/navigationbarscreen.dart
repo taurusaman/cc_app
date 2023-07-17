@@ -81,7 +81,11 @@ class _navscreebstate extends State<navscreen> {
               title: Text('Home'),
               onTap: () {
                 // Navigate to the home screen
-                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => navscreen(),
+                    ));
               },
             ),
             ListTile(

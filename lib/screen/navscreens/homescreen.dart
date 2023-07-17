@@ -9,29 +9,52 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenstate extends State<homescreen> {
+  List<String> images = [
+    "assets/images/image1.JPG",
+    "assets/images/image2.JPG",
+    "assets/images/image3.JPG",
+    "assets/images/image4.JPG",
+    "assets/images/image5.JPG",
+    "assets/images/image6.JPG",
+    "assets/images/image7.JPG",
+    "assets/images/image8.JPG",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: 
+          [Colors.orange, Colors.black])
+        ),
+       child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
         CarouselSlider(
-          items: [
-            Image.asset('assets/images/image1.JPG'),
-            Image.asset('assets/images/image2.JPG'),
-            Image.asset('assets/images/image3.jpg'),
-            Image.asset('assets/images/image4.jpg'),
-            Image.asset('assets/images/image5.jpg'),
-            Image.asset('assets/images/image6.jpg'),
-            Image.asset('assets/images/image7.jpg'),
-            Image.asset('assets/images/image8.jpg'),
-          ],
           options: CarouselOptions(
             autoPlay: true,
             enlargeCenterPage: true,
-            aspectRatio: 16 / 3,
+            aspectRatio: 16 / 5,
             initialPage: 0,
             autoPlayCurve: Curves.fastOutSlowIn,
           ),
+          items: images.map((Image) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    image: DecorationImage(
+                      image: AssetImage(Image),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                );
+              },
+            );
+          }).toList(),
         ),
+
         SizedBox(height: 10), // Adjust the size of the indicator space
         Container(
             width: double.infinity,
@@ -48,6 +71,6 @@ class _homescreenstate extends State<homescreen> {
               ),
             )),
       ]),
-    );
+    ));
   }
 }

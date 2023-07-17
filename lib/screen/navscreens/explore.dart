@@ -11,12 +11,15 @@ class _exploreState extends State<explore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
+        body: Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [Colors.orange, Colors.black])),
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text(
           'this is explore screen are you enjoying by navigating',
           style: TextStyle(fontSize: 50, color: Colors.green),
         ),
-      ),
-    );
+      ]),
+    ));
   }
 }

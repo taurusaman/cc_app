@@ -13,7 +13,7 @@ class _searchState extends State<search> {
     return Scaffold(
       body:Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.orange,Colors.blueGrey, Colors.black])
+          gradient: LinearGradient(colors: [Colors.orange, Colors.black])
         ),
       
       child: Column(

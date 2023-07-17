@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:icons_flutter/icons_flutter.dart';
 
 class homescreen extends StatefulWidget {
   const homescreen({super.key});
@@ -58,19 +59,21 @@ class _homescreenstate extends State<homescreen> {
 
         SizedBox(height: 10), // Adjust the size of the indicator space
         Container(
-            width: double.infinity,
-            height: 100,
-            child: Card(
-              color: Color.fromARGB(255, 199, 91, 52),
-              elevation: 10,
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  'Welcome to Coding Club Currently Date and Time is: $time',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-            )),
+          width: double.infinity,
+          height: 100,
+          child: Card(
+            color: Color.fromARGB(255, 199, 91, 52),
+            elevation: 10,
+            child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Icon(Icons.add_location_rounded),
+              /* child: Text(
+                      'Welcome to Coding Club Currently Date and Time is: $time',
+                      style: TextStyle(fontSize: 20),
+                    ),*/
+            ),
+          ),
+        ),
       ]),
     ));
   }

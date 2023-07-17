@@ -12,23 +12,30 @@ class _landingpageState extends State<landingpage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black87,
-        body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                FilledButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/login');
-                    },
-                    child: Text('Login')),
-                    SizedBox(height: 16.0),
-                FilledButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/register');
-                    },
-                    child: Text('Register'))
-              ],
-            )));
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors:[Colors.orange, Colors.black] )
+          ),
+          child: Padding(
+              padding: EdgeInsets.all(16),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FilledButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/login');
+                        },
+                        child: Text('Login')),
+                        SizedBox(height: 16.0),
+                    FilledButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
+                        child: Text('Register'))
+                  ],
+                ),
+              )),
+        ));
   }
 }

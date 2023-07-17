@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "152916891359",
+    "project_id": "ccapp-f875e",
+    "storage_bucket": "ccapp-f875e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152916891359:android:5cb6972b717a2839bcbb6a",
+        "android_client_info": {
+          "package_name": "com.example.cc_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152916891359-o2k96rl4r2bpk15e4vgsiahiu6ppcjjn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8jRBJYg_2qWsdHuR3MbBOXdhjRBCQHEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152916891359-o2k96rl4r2bpk15e4vgsiahiu6ppcjjn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

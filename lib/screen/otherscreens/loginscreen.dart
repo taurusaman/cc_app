@@ -31,88 +31,90 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                   fontWeight: FontWeight.w900),
             ),
           ),
-          SingleChildScrollView(
-            child: Container(
-                padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5),
-                child: Column(children: [
-                  TextFormField(
-                      onChanged: (value) {
-                        email = value;
-                      },
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
-                          labelText: 'Emaill',
-                          hintText: 'Enter Email',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20)))),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  TextFormField(
-                      onChanged: (value) {
-                        password = value;
-                      },
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          fillColor: Colors.grey.shade100,
-                          filled: true,
-                          labelText: 'Password',
-                          hintText: 'Enter Password',
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20)))),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 199, 91, 52),
+          
+             SingleChildScrollView(
+               child: Container(
+                  padding: EdgeInsets.only(
+                      top: MediaQuery.of(context).size.height * 0.5),
+                  child: Column(children: [
+                    TextFormField(
+                        onChanged: (value) {
+                          email = value;
+                        },
+                        decoration: InputDecoration(
+                            fillColor: Colors.grey.shade100,
+                            filled: true,
+                            labelText: 'Emaill',
+                            hintText: 'Enter Email',
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)))),
+                    SizedBox(
+                      height: 30,
                     ),
-                    onPressed: () async {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => navscreen()));
-                    },
-                    child: Text('Log in'),
-                  ),
-                  SizedBox(
-                    height: 60,
-                  ),
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SignUpScreen()));
-                          },
-                          child: Text('Sign UP',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 15,
-                                color: Color.fromARGB(255, 199, 91, 52),
-                              )),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        ForgetPasswordScreen()));
-                          },
-                          child: Text('Forget Password',
-                              style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: 15,
-                                color: Color.fromARGB(255, 199, 91, 52),
-                              )),
-                        )
-                      ])
-                ])),
-          )
+                    TextFormField(
+                        onChanged: (value) {
+                          password = value;
+                        },
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            fillColor: Colors.grey.shade100,
+                            filled: true,
+                            labelText: 'Password',
+                            hintText: 'Enter Password',
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20)))),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromARGB(255, 199, 91, 52),
+                      ),
+                      onPressed: () async {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => navscreen()));
+                      },
+                      child: Text('Log in'),
+                    ),
+                    SizedBox(
+                      height: 60,
+                    ),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => SignUpScreen()));
+                            },
+                            child: Text('Sign UP',
+                                style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 199, 91, 52),
+                                )),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          ForgetPasswordScreen()));
+                            },
+                            child: Text('Forget Password',
+                                style: TextStyle(
+                                  decoration: TextDecoration.underline,
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 199, 91, 52),
+                                )),
+                          )
+                        ])
+                  ])),
+             ),
+          
         ]));
   }
 }

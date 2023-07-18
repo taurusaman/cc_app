@@ -4,7 +4,6 @@ import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/navscreens/search.dart';
 import 'package:cc_app/screen/otherscreens/setting.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_flutter/icons_flutter.dart';
 
 class navscreen extends StatefulWidget {
   const navscreen({super.key});

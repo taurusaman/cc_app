@@ -1,8 +1,12 @@
+// ignore_for_file: unused_local_variable
+
+import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/forgetpassword.dart';
 import 'package:cc_app/screen/otherscreens/regissterscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyLoginscreen extends StatefulWidget {
   const MyLoginscreen({super.key});
@@ -12,10 +16,10 @@ class MyLoginscreen extends StatefulWidget {
 }
 
 class _MyLoginscreenState extends State<MyLoginscreen> {
+  TextEditingController loginemailcontroller = TextEditingController();
+  TextEditingController loginpasswordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    String email = '', password = '';
-
     return Scaffold(
         body: SingleChildScrollView(
       child: Container(
@@ -25,9 +29,7 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
               EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.5),
           child: Column(children: [
             TextFormField(
-                onChanged: (value) {
-                  email = value;
-                },
+                controller: loginemailcontroller,
                 decoration: InputDecoration(
                     fillColor: Colors.grey.shade100,
                     filled: true,
@@ -39,9 +41,7 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
               height: 30,
             ),
             TextFormField(
-                onChanged: (value) {
-                  password = value;
-                },
+                controller: loginpasswordcontroller,
                 obscureText: true,
                 decoration: InputDecoration(
                     fillColor: Colors.grey.shade100,
@@ -59,20 +59,19 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
               ),
               onPressed: () async {
                 try {
-                  final credential = await FirebaseAuth.instance
-                      .signInWithEmailAndPassword(
-                          email: email, password: password);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => navscreen(),
-                      ));
+                  var loginemail = loginemailcontroller.text.trim();
+                  var loginpassword = loginpasswordcontroller.text.trim();
+
+                  await FirebaseAuth.instance.signInWithEmailAndPassword(
+                      email: loginemail, password: loginpassword);
+
+                       Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => navscreen(),
+                        ));
                 } on FirebaseAuthException catch (e) {
-                  if (e.code == 'user-not-found') {
-                    print('No user found for that email.');
-                  } else if (e.code == 'wrong-password') {
-                    print('Wrong password provided for that user.');
-                  }
+                  print('Error: $e');
                 }
               },
               child: Text('Log in'),

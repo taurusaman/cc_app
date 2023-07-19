@@ -1,4 +1,3 @@
-
 import 'package:cc_app/firebase_options.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/loginscreen.dart';
@@ -94,11 +93,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       userPhone,
                       userEmail,
                       userPassword,
-                    );Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => MyLoginscreen(),
-                    ));
+                    );
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => MyLoginscreen(),
+                        ));
                   },
                   child: Text('Signup')),
               SizedBox(

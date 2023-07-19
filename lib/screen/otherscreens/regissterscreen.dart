@@ -1,3 +1,9 @@
+
+import 'package:cc_app/firebase_options.dart';
+import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
+import 'package:cc_app/screen/otherscreens/loginscreen.dart';
+import 'package:cc_app/services/registerservices.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -9,9 +15,13 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  TextEditingController userNameController = TextEditingController();
+  TextEditingController userPhoneController = TextEditingController();
+  TextEditingController userEmailController = TextEditingController();
+  TextEditingController userPasswordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    String email = '', password = '';
     return Scaffold(
         backgroundColor: Colors.transparent,
         body: Container(
@@ -22,9 +32,31 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.4),
             child: Column(children: [
               TextFormField(
-                  onChanged: (value) {
-                    email = value;
-                  },
+                  controller: userNameController,
+                  decoration: InputDecoration(
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                      labelText: 'Name',
+                      hintText: 'Enter Name',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20)))),
+              SizedBox(
+                height: 30,
+              ),
+              TextFormField(
+                  controller: userPhoneController,
+                  decoration: InputDecoration(
+                      fillColor: Colors.grey.shade100,
+                      filled: true,
+                      labelText: 'Phone',
+                      hintText: 'Enter Phone',
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20)))),
+              SizedBox(
+                height: 30,
+              ),
+              TextFormField(
+                  controller: userEmailController,
                   decoration: InputDecoration(
                       fillColor: Colors.grey.shade100,
                       filled: true,
@@ -36,24 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 height: 30,
               ),
               TextFormField(
-                  onChanged: (value) {
-                    password = value;
-                  },
-                  obscureText: false,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Email',
-                      hintText: 'Enter Email',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
-              SizedBox(
-                height: 30,
-              ),
-              TextFormField(
-                  onChanged: (value) {
-                    password = value;
-                  },
+                  controller: userPasswordController,
                   obscureText: true,
                   decoration: InputDecoration(
                       fillColor: Colors.grey.shade100,
@@ -67,20 +82,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
               ElevatedButton(
                   onPressed: () async {
-                    try {
-                      final credential = await FirebaseAuth.instance
-                          .createUserWithEmailAndPassword(
-                              email: email, password: password);
-                      Navigator.pushNamed(context, 'navscreen');
-                    } on FirebaseAuthException catch (e) {
-                      if (e.code == 'weak-password') {
-                        print('The password provided is too weak.');
-                      } else if (e.code == 'email-already-in-use') {
-                        print('The account already exists for that email.');
-                      }
-                    } catch (e) {
-                      print(e);
-                    }
+                    var userName = userNameController.text.trim();
+                    var userPhone = userPhoneController.text.trim();
+                    var userEmail = userEmailController.text.trim();
+                    var userPassword = userPasswordController.text.trim();
+
+                    await FirebaseAuth.instance.createUserWithEmailAndPassword(
+                        email: userEmail, password: userPassword);
+                    signUpUser(
+                      userName,
+                      userPhone,
+                      userEmail,
+                      userPassword,
+                    );Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => MyLoginscreen(),
+                    ));
                   },
                   child: Text('Signup')),
               SizedBox(

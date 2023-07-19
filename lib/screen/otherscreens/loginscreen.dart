@@ -1,3 +1,4 @@
+import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/forgetpassword.dart';
 import 'package:cc_app/screen/otherscreens/regissterscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -61,7 +62,11 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                   final credential = await FirebaseAuth.instance
                       .signInWithEmailAndPassword(
                           email: email, password: password);
-                  Navigator.pushNamed(context, 'navscreen');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => navscreen(),
+                      ));
                 } on FirebaseAuthException catch (e) {
                   if (e.code == 'user-not-found') {
                     print('No user found for that email.');

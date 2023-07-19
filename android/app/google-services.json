@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "152916891359",
-    "project_id": "ccapp-f875e",
-    "storage_bucket": "ccapp-f875e.appspot.com"
+    "project_number": "120825730847",
+    "project_id": "ccapp-a04e3",
+    "storage_bucket": "ccapp-a04e3.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:152916891359:android:5cb6972b717a2839bcbb6a",
+        "mobilesdk_app_id": "1:120825730847:android:eed51a34b90d04f707c22a",
         "android_client_info": {
           "package_name": "com.example.cc_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "152916891359-o2k96rl4r2bpk15e4vgsiahiu6ppcjjn.apps.googleusercontent.com",
+          "client_id": "120825730847-hhd381ge1mrih84d5c8cc161f8h36k58.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8jRBJYg_2qWsdHuR3MbBOXdhjRBCQHEw"
+          "current_key": "AIzaSyDQk4Zosacxe6XR7JMH23P2i_EcPHVBQ2s"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "152916891359-o2k96rl4r2bpk15e4vgsiahiu6ppcjjn.apps.googleusercontent.com",
+              "client_id": "120825730847-hhd381ge1mrih84d5c8cc161f8h36k58.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

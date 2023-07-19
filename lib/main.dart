@@ -1,3 +1,4 @@
+import 'package:cc_app/firebase_options.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/forgetpassword.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
@@ -11,7 +12,9 @@ import 'package:flutter/material.dart';
 void main() async {
   //for firebase binding to main function of our flutter app
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CCApp',

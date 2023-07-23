@@ -1,4 +1,4 @@
-import 'package:cc_app/firebase_options.dart';
+/*import 'package:cc_app/services/firebase_options.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/loginscreen.dart';
 import 'package:cc_app/services/registerservices.dart';
@@ -107,4 +107,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Text('Already have an account?Login')
             ])));
   }
-}
+}*/

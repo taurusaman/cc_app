@@ -16,7 +16,7 @@ class _profilescreenState extends State<profilescreen> {
           gradient: LinearGradient(colors: [Colors.orange, Colors.green])),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
-          'Coming Soon/nthis is Profile screen are you enjoying by navigating',
+          'Coming Soon\n\nthis is Profile screen Wait yow will have your profile reflected here',
           style: TextStyle(fontSize: 50, color: Colors.redAccent),
         ),
       ]),

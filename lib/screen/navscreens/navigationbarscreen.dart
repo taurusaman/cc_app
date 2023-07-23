@@ -2,6 +2,7 @@ import 'package:cc_app/screen/navscreens/explore.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/navscreens/search.dart';
+import 'package:cc_app/screen/otherscreens/aboutus.dart';
 import 'package:cc_app/screen/otherscreens/setting.dart';
 import 'package:flutter/material.dart';
 
@@ -26,37 +27,37 @@ class _navscreebstate extends State<navscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 199, 91, 52),
+        backgroundColor: Colors.black,
         title: Text('Coding Club'),
       ),
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
-        backgroundColor: Color.fromARGB(255, 199, 91, 52),
+        backgroundColor: Colors.black,
         currentIndex: currentIndex,
         onTap: onItemTapped,
-        fixedColor: Color.fromARGB(255, 199, 91, 52),
-        unselectedItemColor: Colors.black87,
+        fixedColor: Colors.blue,//link activate hone pe color
+        unselectedItemColor: Colors.white,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
-            backgroundColor: Color.fromARGB(255, 199, 91, 52),
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.explore),
-            label: 'Explore',
-            backgroundColor: Color.fromARGB(255, 199, 91, 52),
+            icon: Icon(Icons.shopping_bag_outlined),
+            label: 'Resource',
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
-            backgroundColor: Color.fromARGB(255, 199, 91, 52),
+            icon: Icon(Icons.screen_search_desktop),
+            label: 'Opportunities',
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
-            backgroundColor: Color.fromARGB(255, 199, 91, 52),
+            backgroundColor: Colors.pink,
           ),
         ],
       ),
@@ -96,6 +97,16 @@ class _navscreebstate extends State<navscreen> {
                     context,
                     MaterialPageRoute(
                         builder: ((context) => settingsscreen())));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.info),
+              title: Text('About Us'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => Aboutscreen())));
               },
             ),
           ],

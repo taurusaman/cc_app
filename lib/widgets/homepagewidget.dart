@@ -1,18 +1,24 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cc_app/constants/constants.dart';
 import 'package:flutter/material.dart';
+
 //2nd Container hai homescreen widget ka
 Widget container2() {
-  return Container(
-    height: 200,
-            color: Colors.white,
-            child: Text(
-              'Who we are?\n\n\nCoding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology, University of Lucknow.',
-              style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            ),
+  return Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: Container(
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(8)),
+      height: 200,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Text(
+          'Who we are?\n\nCoding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology',
+          style: TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
+        ),
+      ),
+    ),
   );
 }
 
@@ -48,64 +54,92 @@ Widget carouselwidget() {
 
 //4 box wala container jisme laern build groww  connect hai
 Widget container3() {
-  return Container(
-    height: 400,
-    color: Colors.black,
-    child: GridView.count(
-      crossAxisCount: 2,
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
-            borderRadius: BorderRadius.all(Radius.circular(88)),
-            image:
-                DecorationImage(image: AssetImage('assets/images/learn.png')),
+  return Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Container(
+      height: 400,
+      color: Colors.black,
+      child: GridView.count(
+        crossAxisCount: 2,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
+                borderRadius: BorderRadius.all(Radius.circular(88)),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/learn.png'),
+                    alignment: Alignment.topCenter),
+              ),
+              child: Text(
+                'Learn',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
-          child: Text(
-            'Learn',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
+                borderRadius: BorderRadius.all(Radius.circular(88)),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/grow2.png'),
+                    fit: BoxFit.fitHeight,
+                    alignment: AlignmentDirectional(0, 25)),
+              ),
+              child: Text(
+                'Grow',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
-            borderRadius: BorderRadius.all(Radius.circular(88)),
-            image: DecorationImage(image: AssetImage('assets/images/grow.png')),
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
+                borderRadius: BorderRadius.all(Radius.circular(88)),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/build.png'),
+                    fit: BoxFit.contain),
+              ),
+              child: Text(
+                'Build',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
-          child: Text(
-            'Grow',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.all(32),
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
+                borderRadius: BorderRadius.all(Radius.circular(88)),
+                image: DecorationImage(
+                    image: AssetImage('assets/images/coonect.png')),
+              ),
+              child: Text(
+                'Connect',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
           ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
-            borderRadius: BorderRadius.all(Radius.circular(88)),
-            image:
-                DecorationImage(image: AssetImage('assets/images/build.png')),
-          ),
-          child: Text(
-            'Build',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ),
-        Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [Colors.pink, Colors.blue]),
-            borderRadius: BorderRadius.all(Radius.circular(88)),
-            image:
-                DecorationImage(image: AssetImage('assets/images/coonect.png')),
-          ),
-          child: Text(
-            'Connect',
-            style: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-        ),
-      ],
+        ],
+      ),
     ),
   );
 }

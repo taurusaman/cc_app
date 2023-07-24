@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
-class explore extends StatefulWidget {
-  const explore({super.key});
+class resource extends StatefulWidget {
+  const resource({super.key});
 
   @override
-  State<explore> createState() => _exploreState();
+  State<resource> createState() => _resourceState();
 }
 
-class _exploreState extends State<explore> {
+class _resourceState extends State<resource> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         body: Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(colors: [Colors.orange, Colors.black])),
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+
+      child: Column(mainAxisAlignment: MainAxisAlignment.center, 
+      children: [
         Text(
-          'this is explore screen are you enjoying by navigating',
+          'this is resources screen are you enjoying by navigating',
           style: TextStyle(fontSize: 50, color: Colors.green),
         ),
       ]),

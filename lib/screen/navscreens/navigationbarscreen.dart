@@ -1,4 +1,5 @@
-import 'package:cc_app/screen/navscreens/explore.dart';
+import 'package:cc_app/constants/constants.dart';
+import 'package:cc_app/screen/navscreens/resourcescreen.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/navscreens/search.dart';
@@ -15,7 +16,7 @@ class navscreen extends StatefulWidget {
 
 class _navscreebstate extends State<navscreen> {
   int currentIndex = 0;
-  List screens = [homescreen(), explore(), search(), profilescreen()];
+  List screens = [homescreen(), resource(), search(), profilescreen()];
 
   void onItemTapped(int index) {
     setState(() {
@@ -36,8 +37,11 @@ class _navscreebstate extends State<navscreen> {
         backgroundColor: Colors.black,
         currentIndex: currentIndex,
         onTap: onItemTapped,
-        fixedColor: Colors.blue,//link activate hone pe color
+        fixedColor: primarycolor,//link activate hone pe color
         unselectedItemColor: Colors.white,
+        showUnselectedLabels: true,
+        unselectedFontSize: 8,
+        elevation: 29,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),

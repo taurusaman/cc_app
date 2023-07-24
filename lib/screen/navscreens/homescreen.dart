@@ -18,7 +18,7 @@ class _homescreenstate extends State<homescreen> {
       child: Container(
         decoration: BoxDecoration(color: Colors.black),
         child: Column(children: [
-          carouselwidget(),
+          //carouselwidget(),
           SizedBox(height: 10),
           Container(
             width: double.infinity,
@@ -44,20 +44,27 @@ class _homescreenstate extends State<homescreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: container3(),
+            child: containerr3(),
           ),
-          SizedBox(height: 1,),
+          SizedBox(
+            height: 1,
+          ),
           Padding(
             padding: const EdgeInsets.all(55.0),
             child: Container(
               decoration: BoxDecoration(
-                 color: Color.fromARGB(255, 199, 91, 52).withOpacity(0.9),
-                borderRadius: BorderRadius.only(topRight: Radius.circular(72),bottomLeft: Radius.circular(72)),
+                color: Color.fromARGB(255, 199, 91, 52).withOpacity(0.9),
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(72),
+                    bottomLeft: Radius.circular(72)),
               ),
               height: 300,
               child: Padding(
                 padding: const EdgeInsets.all(100.0),
-                child: Text('Wait This App is in Super Alpha Stage Will like to take your valuable suggestion in app',style: TextStyle(fontWeight: FontWeight.w600),),
+                child: Text(
+                  'Wait This App is in Super Alpha Stage Will like to take your valuable suggestion in app',
+                  style: TextStyle(fontWeight: FontWeight.w600),
+                ),
               ),
             ),
           ),
@@ -73,18 +80,11 @@ class _homescreenstate extends State<homescreen> {
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Image(image: AssetImage('assets/images/bldimg2.jpg')),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
             child: Image(image: AssetImage('assets/images/bldimg3.jpg')),
           ),
+          lastcontainer()
         ]),
       ),
-      
     ));
   }
 }

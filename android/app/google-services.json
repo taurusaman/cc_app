@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "120825730847",
+    "firebase_url": "https://ccapp-a04e3-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "ccapp-a04e3",
     "storage_bucket": "ccapp-a04e3.appspot.com"
   },
@@ -14,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "120825730847-hhd381ge1mrih84d5c8cc161f8h36k58.apps.googleusercontent.com",
+          "client_id": "120825730847-sqqee76f8cfi3hl3p6lj3r7h3dgn01tb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -29,6 +30,13 @@
             {
               "client_id": "120825730847-hhd381ge1mrih84d5c8cc161f8h36k58.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "120825730847-4elbjj5vtme668r3rtdsepd0hfeft2qp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ccApp.RunnerTests"
+              }
             }
           ]
         }

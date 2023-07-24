@@ -1,6 +1,6 @@
 // ignore_for_file: unused_local_variable
 
-/*import 'package:cc_app/screen/navscreens/homescreen.dart';
+import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/forgetpassword.dart';
 import 'package:cc_app/screen/otherscreens/regissterscreen.dart';
@@ -110,4 +110,4 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
           ])),
     ));
   }
-}*/
+}

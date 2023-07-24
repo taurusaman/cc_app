@@ -52,6 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '120825730847',
     projectId: 'ccapp-a04e3',
     authDomain: 'ccapp-a04e3.firebaseapp.com',
+    databaseURL: 'https://ccapp-a04e3-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'ccapp-a04e3.appspot.com',
     measurementId: 'G-9VQGBCEHHH',
   );
@@ -61,6 +62,7 @@ class DefaultFirebaseOptions {
     appId: '1:120825730847:android:eed51a34b90d04f707c22a',
     messagingSenderId: '120825730847',
     projectId: 'ccapp-a04e3',
+    databaseURL: 'https://ccapp-a04e3-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'ccapp-a04e3.appspot.com',
   );
 
@@ -69,6 +71,7 @@ class DefaultFirebaseOptions {
     appId: '1:120825730847:ios:a9fd0bd15bcc67a407c22a',
     messagingSenderId: '120825730847',
     projectId: 'ccapp-a04e3',
+    databaseURL: 'https://ccapp-a04e3-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'ccapp-a04e3.appspot.com',
     iosClientId: '120825730847-m5aitgpe5r7ttf2s987kbi99mucavj65.apps.googleusercontent.com',
     iosBundleId: 'com.example.ccApp',

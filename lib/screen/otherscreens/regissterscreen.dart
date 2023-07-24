@@ -1,4 +1,4 @@
-/*import 'package:cc_app/services/firebase_options.dart';
+
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/otherscreens/loginscreen.dart';
 import 'package:cc_app/services/registerservices.dart';
@@ -14,6 +14,7 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  
   TextEditingController userNameController = TextEditingController();
   TextEditingController userPhoneController = TextEditingController();
   TextEditingController userEmailController = TextEditingController();
@@ -36,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       fillColor: Colors.grey.shade100,
                       filled: true,
                       labelText: 'Name',
-                      hintText: 'Enter Name',
+                      hintText: 'Enter Name k',
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20)))),
               SizedBox(
@@ -107,4 +108,4 @@ class _SignUpScreenState extends State<SignUpScreen> {
               Text('Already have an account?Login')
             ])));
   }
-}*/
+}

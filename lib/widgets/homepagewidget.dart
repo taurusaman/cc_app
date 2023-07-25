@@ -1,4 +1,4 @@
-import 'dart:js';
+
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cc_app/constants/constants.dart';
@@ -6,27 +6,44 @@ import 'package:cc_app/screen/deepscreens/buildscreen.dart';
 import 'package:cc_app/screen/navscreens/navigationbarscreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
 import 'package:cc_app/screen/navscreens/resourcescreen.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 //2nd Container hai homescreen widget ka
 Widget container2() {
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
-      decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(8)),
-      height: 200,
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Text(
-          'Who we are?\n\nCoding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology',
-          style: TextStyle(
-              color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(8)),
+        height: 200,
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: RichText(
+            text: TextSpan(
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500),
+                children: [
+                  TextSpan(text: '         W',style: TextStyle(
+                    color: primarycolor,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800),),
+                  TextSpan(text: 'ho',style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800),),
+                  TextSpan(text: ' we are?              ',style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800),),
+                  TextSpan(
+                      text:
+                          '                       Coding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology'),
+                ]),
+          ),
         ),
       ),
-    ),
   );
 }
 
@@ -107,7 +124,7 @@ class _containerr3State extends State<containerr3> {
                     'Learn',
                     textAlign: TextAlign.justify,
                     style: TextStyle(
-                        color: primarycolor,
+                        color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold),
                   ),
@@ -234,11 +251,11 @@ Widget lastcontainer() {
                 '© Coding Connoisseurs, Faculty of Engineering and Technology | Made by',
             style: TextStyle(color: Colors.black)),
         TextSpan(
-            text: 'Aman Singh',
+            text: ' Aman Singh ',
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
-        TextSpan(text: 'and'),
+        TextSpan(text: 'and', style: TextStyle(color: Colors.black)),
         TextSpan(
-            text: 'Aastha Seth',
+            text: ' Aastha Seth',
             style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black)),
       ])),
     ),

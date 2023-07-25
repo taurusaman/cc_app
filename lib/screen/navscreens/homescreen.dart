@@ -19,6 +19,8 @@ class _homescreenstate extends State<homescreen> {
         decoration: BoxDecoration(color: Colors.black),
         child: Column(children: [
           //carouselwidget(),
+
+          
           SizedBox(height: 10),
           Container(
             width: double.infinity,

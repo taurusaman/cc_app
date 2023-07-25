@@ -21,7 +21,7 @@ class _searchState extends State<search> {
        children: [
         
          Text(
-          'Coming Soon...this is Search screen are you enjoying by navigating',
+          'Coming Soon..',
           style: TextStyle(fontSize: 50, color: Colors.green),
         ),
       ]),

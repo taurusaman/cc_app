@@ -28,7 +28,10 @@ class _resourceState extends State<resource> {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   '    Resources',
-                  style: TextStyle(fontSize: 45, fontWeight: FontWeight.bold, color: Colors.white),
+                  style: TextStyle(
+                      fontSize: 45,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
                 ),
               ),
             ),
@@ -38,7 +41,11 @@ class _resourceState extends State<resource> {
             child: Container(
               height: 150,
               width: 400,
-              decoration: BoxDecoration(color: primarycolor,borderRadius: BorderRadius.only(topRight: Radius.circular(52),bottomLeft:Radius.circular(32) )),
+              decoration: BoxDecoration(
+                  color: primarycolor,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(52),
+                      bottomLeft: Radius.circular(52))),
               child: Row(
                 children: [
                   Padding(
@@ -56,11 +63,13 @@ class _resourceState extends State<resource> {
                         ),
                       ),
                     ),
-                  ),SizedBox(height: 30,),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Container(
-                    
-                    child: Image.asset(height: 60,
-                    width: 80,'assets/images/learn.png'))
+                      child: Image.asset(
+                          height: 60, width: 80, 'assets/images/learn.png'))
                 ],
               ),
             ),
@@ -68,12 +77,17 @@ class _resourceState extends State<resource> {
           cpcard1(),
           cpcard2(),
           cpcard3(),
+          SizedBox(height: 150,),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
               height: 150,
               width: 400,
-              decoration: BoxDecoration(color: primarycolor,borderRadius: BorderRadius.only(topRight: Radius.circular(52),bottomLeft:Radius.circular(32) )),
+              decoration: BoxDecoration(
+                  color: primarycolor,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(52),
+                      bottomLeft: Radius.circular(32))),
               child: Row(
                 children: [
                   Padding(
@@ -91,11 +105,13 @@ class _resourceState extends State<resource> {
                         ),
                       ),
                     ),
-                  ),SizedBox(height: 30,),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Container(
-                    
-                    child: Image.asset(height: 60,
-                    width: 80,'assets/images/grow.png'))
+                      child: Image.asset(
+                          height: 60, width: 80, 'assets/images/grow.png'))
                 ],
               ),
             ),
@@ -105,6 +121,68 @@ class _resourceState extends State<resource> {
           sdecard3(),
           sdecard4(),
           sdecard5(),
+          SizedBox(height: 200,),
+          Padding(
+            padding: const EdgeInsets.all(34.0),
+            child: Container(
+              width: double.infinity,
+              height: 100,
+              color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  '    Opportunities',
+                  style: TextStyle(
+                      fontSize: 41,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 150,
+              width: 400,
+              decoration: BoxDecoration(
+                  color: primarycolor,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(52),
+                      bottomLeft: Radius.circular(52))),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      width: 200,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Internships',
+                          style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w700,
+                              color: Colors.black),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Container(
+                      child: Image.asset(
+                          height: 60, width: 80, 'assets/images/learn.png'))
+                ],
+              ),
+            ),
+          ),
+          intercard1(),
+          interncard2(),
+          interncard3(),
+          interncard4(),
+          interncard5(),
           lastcontainer(),
         ]),
       ),

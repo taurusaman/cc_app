@@ -39,7 +39,7 @@ Widget container2() {
                     fontWeight: FontWeight.w800),),
                   TextSpan(
                       text:
-                          '                       Coding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology'),
+                          '\nCoding Connoisseurs is a group of people who are aiming to build a coding culture in Faculty of Engineering and Technology'),
                 ]),
           ),
         ),

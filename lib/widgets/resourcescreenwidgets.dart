@@ -36,12 +36,12 @@ Widget cpcard1() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
         alignment: AlignmentDirectional.topEnd,
         child: ElevatedButton(
+            style: ButtonStyle(),
             onPressed: () {},
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -51,7 +51,6 @@ Widget cpcard1() {
     )
   ]);
 }
-
 
 Widget cpcard2() {
   return Stack(children: [
@@ -79,7 +78,6 @@ Widget cpcard2() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -94,7 +92,6 @@ Widget cpcard2() {
     )
   ]);
 }
-
 
 Widget cpcard3() {
   return Stack(children: [
@@ -122,7 +119,6 @@ Widget cpcard3() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -137,7 +133,6 @@ Widget cpcard3() {
     )
   ]);
 }
-
 
 Widget sdecard1() {
   return Stack(children: [
@@ -165,7 +160,6 @@ Widget sdecard1() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -188,13 +182,14 @@ Widget sdecard2() {
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(20)),
-        height: 250,
+        height: 410,
         child: Padding(
           padding: const EdgeInsets.all(22.0),
           child: RichText(
               text: TextSpan(children: [
             TextSpan(
-                text: '\nMIT OpenCourseware | Design and Analysis of Algorithms',
+                text:
+                    '\nMIT OpenCourseware | Design and Analysis of Algorithms',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 27,
@@ -207,7 +202,6 @@ Widget sdecard2() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -249,7 +243,6 @@ Widget sdecard3() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -272,7 +265,7 @@ Widget sdecard4() {
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(20)),
-        height: 250,
+        height: 200,
         child: Padding(
           padding: const EdgeInsets.all(22.0),
           child: RichText(
@@ -284,14 +277,12 @@ Widget sdecard4() {
                     fontSize: 27,
                     fontWeight: FontWeight.w600)),
             TextSpan(
-                text:
-                    '\n\nA book on Operating System Fundamental concepts.',
+                text: '\n\nA book on Operating System Fundamental concepts.',
                 style: TextStyle(color: Colors.black, fontSize: 18))
           ])),
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -314,7 +305,7 @@ Widget sdecard5() {
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(20)),
-        height: 250,
+        height: 210,
         child: Padding(
           padding: const EdgeInsets.all(22.0),
           child: RichText(
@@ -333,7 +324,6 @@ Widget sdecard5() {
         ),
       ),
     ),
-    
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(
@@ -375,7 +365,211 @@ Widget sdecard6() {
         ),
       ),
     ),
-    
+    Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Align(
+        alignment: AlignmentDirectional.topEnd,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Visit Website'),
+            )),
+      ),
+    )
+  ]);
+}
+
+Widget intercard1() {
+  return Stack(children: [
+    Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(22.0),
+          child: RichText(
+              text: TextSpan(children: [
+            TextSpan(
+                text: '\nCracking the Coding Interview',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w600)),
+            TextSpan(
+                text:
+                    '\n\nCracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                style: TextStyle(color: Colors.black, fontSize: 18))
+          ])),
+        ),
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Align(
+        alignment: AlignmentDirectional.topEnd,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Visit Website'),
+            )),
+      ),
+    )
+  ]);
+}
+
+Widget interncard2() {
+  return Stack(children: [
+    Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(22.0),
+          child: RichText(
+              text: TextSpan(children: [
+            TextSpan(
+                text: '\nCracking the Coding Interview',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w600)),
+            TextSpan(
+                text:
+                    '\n\nCracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                style: TextStyle(color: Colors.black, fontSize: 18))
+          ])),
+        ),
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Align(
+        alignment: AlignmentDirectional.topEnd,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Visit Website'),
+            )),
+      ),
+    )
+  ]);
+}
+
+Widget interncard3() {
+  return Stack(children: [
+    Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(22.0),
+          child: RichText(
+              text: TextSpan(children: [
+            TextSpan(
+                text: '\nCracking the Coding Interview',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w600)),
+            TextSpan(
+                text:
+                    '\n\nCracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                style: TextStyle(color: Colors.black, fontSize: 18))
+          ])),
+        ),
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Align(
+        alignment: AlignmentDirectional.topEnd,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Visit Website'),
+            )),
+      ),
+    )
+  ]);
+}
+
+Widget interncard4() {
+  return Stack(children: [
+    Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(22.0),
+          child: RichText(
+              text: TextSpan(children: [
+            TextSpan(
+                text: '\nCracking the Coding Interview',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w600)),
+            TextSpan(
+                text:
+                    '\n\nCracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                style: TextStyle(color: Colors.black, fontSize: 18))
+          ])),
+        ),
+      ),
+    ),
+    Padding(
+      padding: const EdgeInsets.all(25.0),
+      child: Align(
+        alignment: AlignmentDirectional.topEnd,
+        child: ElevatedButton(
+            onPressed: () {},
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Visit Website'),
+            )),
+      ),
+    )
+  ]);
+}
+
+Widget interncard5() {
+  return Stack(children: [
+    Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(20)),
+        height: 250,
+        child: Padding(
+          padding: const EdgeInsets.all(22.0),
+          child: RichText(
+              text: TextSpan(children: [
+            TextSpan(
+                text: '\nCracking the Coding Interview',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 27,
+                    fontWeight: FontWeight.w600)),
+            TextSpan(
+                text:
+                    '\n\nCracking the Coding Interview: 189 Programming Questions and Solutions is a book by Gayle Laakmann McDowell about coding interviews.',
+                style: TextStyle(color: Colors.black, fontSize: 18))
+          ])),
+        ),
+      ),
+    ),
     Padding(
       padding: const EdgeInsets.all(25.0),
       child: Align(

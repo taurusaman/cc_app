@@ -19,37 +19,44 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      child: SingleChildScrollView(
-        child: Container(
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
             decoration: BoxDecoration(
                 color: Colors.black),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              
               children: [
               
-              TextFormField(
-                  controller: loginemailcontroller,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Emaill',
-                      hintText: 'Enter Email',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
-              SizedBox(
-                height: 30,
+              SizedBox(height: 400,),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                    controller: loginemailcontroller,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        labelText: 'Emaill',
+                        hintText: 'Enter Email',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
               ),
-              TextFormField(
-                  controller: loginpasswordcontroller,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade300,
-                      filled: true,
-                      labelText: 'Password',
-                      hintText: 'Enter Password',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
+              SizedBox(
+                height: 7,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(
+                    controller: loginpasswordcontroller,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade300,
+                        filled: true,
+                        labelText: 'Password',
+                        hintText: 'Enter Password',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
+              ),
               SizedBox(
                 height: 30,
               ),
@@ -61,10 +68,10 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                   try {
                     var loginemail = loginemailcontroller.text.trim();
                     var loginpassword = loginpasswordcontroller.text.trim();
-      
+        
                     await FirebaseAuth.instance.signInWithEmailAndPassword(
                         email: loginemail, password: loginpassword);
-      
+        
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -77,7 +84,7 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                 child: Text('Log in'),
               ),
               SizedBox(
-                height: 60,
+                height: 280,
               ),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, 
               children: [
@@ -108,8 +115,6 @@ class _MyLoginscreenState extends State<MyLoginscreen> {
                       )),
                 )
               ])
-            ])),
-      ),
-    ));
+            ])));
   }
 }

@@ -13,10 +13,10 @@ class _profilescreenState extends State<profilescreen> {
     return Scaffold(
         body: Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.orange, Colors.green])),
+          gradient: LinearGradient(colors: [Colors.pink, Colors.blue])),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(
-          'Coming Soon\n\nthis is Profile screen Wait yow will have your profile reflected here',
+          'Coming Soon\n\nthis is Profile screen Wait you will have your profile reflected here with leaderborad and other details',
           style: TextStyle(fontSize: 50, color: Colors.redAccent),
         ),
       ]),

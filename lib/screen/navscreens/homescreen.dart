@@ -1,4 +1,4 @@
-import 'package:cc_app/widgets/homepagewidget.dart';
+import 'package:cc_app/widgets/homscreenwidget.dart';
 import 'package:flutter/material.dart';
 
 class homescreen extends StatefulWidget {
@@ -18,7 +18,7 @@ class _homescreenstate extends State<homescreen> {
       child: Container(
         decoration: BoxDecoration(color: Colors.black),
         child: Column(children: [
-          //carouselwidget(),
+          carouselwidget(),
 
           
           SizedBox(height: 10),
@@ -62,9 +62,9 @@ class _homescreenstate extends State<homescreen> {
               ),
               height: 300,
               child: Padding(
-                padding: const EdgeInsets.all(100.0),
+                padding: const EdgeInsets.all(66.0),
                 child: Text(
-                  'Wait This App is in Super Alpha Stage Will like to take your valuable suggestion in app',
+                  'Annoucements, upcoming Events, Recent Coding Challenges and News Section \n\nWait This App is in Super Alpha Stage Will like to take your valuable suggestion in app',
                   style: TextStyle(fontWeight: FontWeight.w600),
                 ),
               ),

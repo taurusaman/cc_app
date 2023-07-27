@@ -21,7 +21,7 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CCApp',
-    initialRoute: '/navscreen',
+    initialRoute: '/landing',
     routes: {
       '/home': (context) => homescreen(),
       '/login': (context) => MyLoginscreen(),

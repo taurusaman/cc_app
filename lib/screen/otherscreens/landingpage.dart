@@ -20,17 +20,17 @@ class _landingpageState extends State<landingpage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                FilledButton(
+                FilledButton(style: ButtonStyle(),
                     onPressed: () {
                       Navigator.pushNamed(context, '/login');
                     },
-                    child: Text('Login')),
+                    child: Text('Login',style: TextStyle(color: Colors.white),)),
                 SizedBox(height: 16.0),
                 FilledButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/register');
                     },
-                    child: Text('Register'))
+                    child: Text('Register',style: TextStyle(color: Colors.white),))
               ],
             ),
           )),

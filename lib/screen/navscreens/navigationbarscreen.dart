@@ -2,7 +2,7 @@ import 'package:cc_app/constants/constants.dart';
 import 'package:cc_app/screen/navscreens/resourcescreen.dart';
 import 'package:cc_app/screen/navscreens/homescreen.dart';
 import 'package:cc_app/screen/navscreens/profile.dart';
-import 'package:cc_app/screen/navscreens/search.dart';
+import 'package:cc_app/screen/navscreens/explore.dart';
 import 'package:cc_app/screen/otherscreens/aboutus.dart';
 import 'package:cc_app/screen/otherscreens/setting.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +16,7 @@ class navscreen extends StatefulWidget {
 
 class _navscreebstate extends State<navscreen> {
   int currentIndex = 0;
-  List screens = [homescreen(), resource(), search(), profilescreen()];
+  List screens = [homescreen(), resource(), explore(), profilescreen()];
 
   void onItemTapped(int index) {
     setState(() {
@@ -28,6 +28,7 @@ class _navscreebstate extends State<navscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         title: Text('Coding Club'),
       ),
@@ -54,8 +55,8 @@ class _navscreebstate extends State<navscreen> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.screen_search_desktop),
-            label: 'Opportunities',
+            icon: Icon(Icons.explore),
+            label: 'Explore',
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(

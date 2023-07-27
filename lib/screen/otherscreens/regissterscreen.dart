@@ -29,54 +29,66 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 gradient:
                     LinearGradient(colors: [Colors.orange, Colors.black])),
             padding:
-                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.4),
+                EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.37),
             child: Column(children: [
-              TextFormField(
-                  controller: userNameController,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Name',
-                      hintText: 'Enter Name k',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
+              Padding(
+                padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                child: TextFormField(
+                    controller: userNameController,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        labelText: 'Name',
+                        hintText: 'Enter Name',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
+              ),
               SizedBox(
                 height: 30,
               ),
-              TextFormField(
-                  controller: userPhoneController,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Phone',
-                      hintText: 'Enter Phone',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
+              Padding(
+                padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                child: TextFormField(
+                    controller: userPhoneController,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        labelText: 'Phone',
+                        hintText: 'Enter Phone',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
+              ),
               SizedBox(
                 height: 30,
               ),
-              TextFormField(
-                  controller: userEmailController,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Email',
-                      hintText: 'Enter Email',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
+              Padding(
+                padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                child: TextFormField(
+                    controller: userEmailController,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        labelText: 'Email',
+                        hintText: 'Enter Email',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
+              ),
               SizedBox(
                 height: 30,
               ),
-              TextFormField(
-                  controller: userPasswordController,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      fillColor: Colors.grey.shade100,
-                      filled: true,
-                      labelText: 'Password',
-                      hintText: 'Enter Password',
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20)))),
+              Padding(
+                padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                child: TextFormField(
+                    controller: userPasswordController,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        fillColor: Colors.grey.shade100,
+                        filled: true,
+                        labelText: 'Password',
+                        hintText: 'Enter Password',
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)))),
+              ),
               SizedBox(
                 height: 30,
               ),
